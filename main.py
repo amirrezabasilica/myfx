@@ -214,7 +214,7 @@ while True:
 
     # Add title and layout adjustments
     plt.title('Long and Short Positions Over Time')
-    # plt.tight_layout()
+    plt.tight_layout()
 
     # Display the plot in Streamlit
     chart.pyplot(fig)
