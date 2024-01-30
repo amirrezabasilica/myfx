@@ -195,14 +195,15 @@ while True:
 
     pivot_df = pivot_df[-200:]
     # Create a Matplotlib plot with dual axes
-    fig, ax1 = plt.subplots()
+    fig, ax1 = plt.subplots(figsize=(10, 6))
+
     # Plot 'Buy' position on the primary y-axis
     color = 'tab:blue'
     ax1.set_xlabel('Time')
     ax1.set_ylabel('Buy Lots', color=color)
     ax1.plot(pivot_df.index, pivot_df['Long'], label='Long', color=color)
     ax1.tick_params(axis='y', labelcolor=color)
-    ax1.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d %H:%M'))
+    ax1.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d %H:%M'))
     plt.xticks(rotation=45)
 
     # Create a second y-axis for 'Sell' position
