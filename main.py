@@ -218,4 +218,4 @@ while True:
     chart.pyplot(fig)
     # chart.line_chart(pivot_df)
     # Sleep for some time (e.g., 5 seconds)
-    time.sleep(5)
+    time.sleep(30)
