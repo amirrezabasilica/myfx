@@ -187,7 +187,7 @@ while True:
     df = append_data(df, new_data)  # Append new data to the DataFrame
 
     # Pivot the DataFrame for the line chart
-    pivot_df = df.pivot_table(index='Time', columns='Position', values='Percentage', aggfunc='mean')
+    pivot_df = df.pivot_table(index='Time', columns='Position', values='Lots', aggfunc='mean')
     pivot_df.index = pd.to_datetime(pivot_df.index)
     print("df info:",pivot_df.info())
     
