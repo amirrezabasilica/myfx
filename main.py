@@ -8,7 +8,7 @@ url = 'https://www.myfxbook.com/community/outlook/EURUSD'
 def update_data():
     # Send a GET request
     response = requests.get(url)
-    print(response)
+    # print(response)
     # Parse the HTML content
     soup = BeautifulSoup(response.text, 'html.parser')
 
@@ -19,7 +19,7 @@ def update_data():
     rows = table.find_all('tr')
     headers = [header.text for header in rows[0].find_all('th')]
     data = [[cell.text for cell in row.find_all('td')] for row in rows[1:]]
-    print(data)
+    # print(data)
 
     # Function to clean each cell in the data
     def clean_cell(cell):
