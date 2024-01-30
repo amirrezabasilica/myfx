@@ -192,6 +192,8 @@ while True:
     print("df info:",pivot_df.info())
     
     pivot_df.sort_index(inplace=True)
+
+    pivot_df = pivot_df[-200:]
     # Create a Matplotlib plot with dual axes
     fig, ax1 = plt.subplots()
     # Plot 'Buy' position on the primary y-axis
