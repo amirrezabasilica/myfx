@@ -189,7 +189,7 @@ while True:
     # Pivot the DataFrame for the line chart
     pivot_df = df.pivot_table(index='Time', columns='Position', values='Lots', aggfunc='mean')
     pivot_df.index = pd.to_datetime(pivot_df.index)
-    print("df info:",pivot_df.info())
+    # print("df info:",pivot_df.info())
     
     pivot_df.sort_index(inplace=True)
 
